@@ -1,4 +1,4 @@
-local M = {}
+local visual_replace = {}
 
 local function getRange()
     local range = {}
@@ -8,11 +8,11 @@ local function getRange()
     return range
 end
 
-function M.replace()
+function visual_replace.replace()
     local match = vim.fn.input("match: ")
     local replacer = vim.fn.input("replace: ")
     local range = getRange()
     vim.api.nvim_feedkeys(":" .. range.start[1] .. ',' .. range.ending[1] .. "s/" .. match .. "/" .. replacer .. "/g | nohlsearch", "i", false)
 end
 
-return M
+return visual_replace

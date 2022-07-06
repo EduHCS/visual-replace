@@ -20,7 +20,7 @@ use 'eduhcs/visual-replace'
 
 You will need to setup your own keybings as **visual-replace** doesn't come with any:
 ```lua
-map("v", "<leader>r", ":lua require('visual-replace').replace()<cr>", options )
+map("v", "<leader>r", ":lua require('visual-replace').replace()<cr>", { noremap = true } )
 ```
 
 This will bind the replace action to **<leader>r** in visual mode
